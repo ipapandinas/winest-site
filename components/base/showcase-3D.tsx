@@ -94,7 +94,7 @@ const Showcase3D = ({ images, selectedImageId, setSelectedImageId }: Props) => {
             className="block md:hidden"
             alt="Hero card"
             src={src}
-            height={227.5}
+            height={250}
             width={250}
           />
           <AppImage
@@ -102,7 +102,7 @@ const Showcase3D = ({ images, selectedImageId, setSelectedImageId }: Props) => {
             alt="Hero card"
             src={src}
             height={300}
-            width={273}
+            width={300}
           />
         </SLabel>
       ))}

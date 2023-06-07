@@ -1,5 +1,6 @@
 "use client";
-import { createRef, useState } from "react";
+import { createRef, useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 import { KeyCard } from "@/components/base/key-card";
 import { KeyValue } from "@/components/base/key-value";
@@ -18,6 +19,7 @@ const SHOWCASE_3D_IMAGES = [
 
 export default function Home() {
   const howItWorksRef = createRef<HTMLDivElement>();
+  const [loaded, setLoaded] = useState(false);
   const [selectedImageId, setSelectedImageId] = useState<number>(1);
 
   const executeScroll = () => {
@@ -27,6 +29,10 @@ export default function Home() {
         block: "start",
       });
   };
+
+  useEffect(() => {
+    setLoaded(true);
+  }, []);
 
   return (
     <>
@@ -67,19 +73,19 @@ export default function Home() {
             </div>
           </div>
           <div className="max-w-prose w-full m-auto sm:w-auto lg:h-full lg:m-0 lg:mr-24">
-            <Showcase3D
-              images={SHOWCASE_3D_IMAGES}
-              selectedImageId={selectedImageId}
-              setSelectedImageId={setSelectedImageId}
-            />
+            <motion.div
+              className={`${loaded ? "" : "opacity-0"}`}
+              animate={loaded ? { opacity: 1 } : {}}
+              initial={{ opacity: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <Showcase3D
+                images={SHOWCASE_3D_IMAGES}
+                selectedImageId={selectedImageId}
+                setSelectedImageId={setSelectedImageId}
+              />
+            </motion.div>
           </div>
-          {/* <AppImage
-            className="max-w-prose w-full m-auto sm:w-auto md:h-full md:m-0"
-            alt="Hero cards"
-            src="/assets/hero-card.png"
-            height={440}
-            width={440}
-          /> */}
         </div>
       </div>
 
