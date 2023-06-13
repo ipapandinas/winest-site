@@ -85,24 +85,23 @@ const Showcase3D = ({ images, selectedImageId, setSelectedImageId }: Props) => {
       {images.map((src, idx) => (
         <SLabel
           key={idx}
-          className="cards"
           htmlFor={`input-${idx}`}
           id={`nft-${idx}`}
           {...bind()}
         >
           <AppImage
-            className="block md:hidden"
+            className="block md:hidden rounded-3xl"
             alt="Hero card"
             src={src}
             height={250}
             width={250}
           />
           <AppImage
-            className="hidden md:block"
+            className="hidden md:block rounded-3xl"
             alt="Hero card"
             src={src}
-            height={300}
-            width={300}
+            height={450}
+            width={450}
           />
         </SLabel>
       ))}
@@ -111,7 +110,7 @@ const Showcase3D = ({ images, selectedImageId, setSelectedImageId }: Props) => {
 };
 
 const SWrapper = styled.div`
-  width: 38rem;
+  width: 24rem;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -143,7 +142,6 @@ const SWrapper = styled.div`
   }
 
   height: 300px;
-  width: auto;
 
   @media screen and (min-width: 768px) {
     height: 400px;
@@ -155,7 +153,7 @@ const SInput = styled.input`
   appearance: none;
   width: 6.4rem;
   height: ${`${INPUT_HEIGHT_REM}rem`};
-  border-radius: ${`${INPUT_HEIGHT_REM / 2}rem`};
+  border-radius: 1.5rem;
   cursor: pointer;
   margin: 0;
 `;

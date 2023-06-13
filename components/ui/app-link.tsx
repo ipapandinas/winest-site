@@ -6,7 +6,7 @@ interface Props extends LinkProps {
 
 export default function AppLink(props: Props) {
   return (
-    <Link className="no-underline text-primary" {...props}>
+    <Link className="no-underline" {...props}>
       {props.children}
     </Link>
   );
