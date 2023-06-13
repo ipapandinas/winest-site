@@ -5,11 +5,15 @@ export const config = {
   runtime: "edge",
 };
 
+const archivoFont = fetch(
+  new URL("../../public/fonts/Archivo-SemiBold.ttf", import.meta.url)
+).then((res) => res.arrayBuffer());
 const bentogaFont = fetch(
   new URL("../../public/fonts/Bentoga-Thin.otf", import.meta.url)
 ).then((res) => res.arrayBuffer());
 
 const DefaultOgImage = async () => {
+  const archivoFontData = await archivoFont;
   const bentogaFontData = await bentogaFont;
 
   return new ImageResponse(
@@ -25,59 +29,43 @@ const DefaultOgImage = async () => {
           flexDirection: "column",
           flexWrap: "nowrap",
           fontSize: 128,
-          backgroundColor: "#080411",
+          backgroundColor: "#fff",
         }}
       >
         <div
           style={{
             display: "flex",
-            textAlign: "center",
+            flexDirection: "column",
             alignItems: "center",
             justifyContent: "flex-end",
-            flexDirection: "column",
-            flexWrap: "nowrap",
+            margin: 0,
+            fontSize: 130,
+            fontStyle: "normal",
+            fontFamily: '"Archivo"',
+            fontWeight: 700,
+            color: "#0f172a",
+            padding: "0 120px",
+            lineHeight: 1.4,
+            whiteSpace: "pre-line",
+            letterSpacing: "-0.025em",
           }}
         >
+          Shaping
+          <br />
+          the future of
+          <br />
           <div
             style={{
-              margin: 0,
-              fontSize: 48,
-              fontStyle: "normal",
               fontFamily: '"Bentoga"',
-              fontWeight: 700,
-              letterSpacing: 6,
-              color: "white",
-              marginTop: 120,
-              padding: "0 120px",
-              lineHeight: 1.4,
-              whiteSpace: "pre-wrap",
+              padding: 16,
+              paddingTop: 2,
+              paddingBottom: 2,
+              backgroundImage:
+                "linear-gradient(180deg, #62ffa6 94%, #da0000 100%, #6248ff)",
             }}
           >
-            Winest Club
+            Wine
           </div>
-          <div
-            style={{
-              fontSize: 24,
-              fontStyle: "normal",
-              letterSpacing: "-0.025em",
-              color: "white",
-              marginTop: 24,
-              padding: "0 120px",
-              lineHeight: 1.4,
-              whiteSpace: "pre-wrap",
-            }}
-          >
-            Winest Club is a Wine Club on Web3.
-          </div>
-          {/* <div
-            style={{
-              display: "flex",
-              alignItems: "flex-end",
-              justifyContent: "flex-end",
-              marginTop: 80,
-              borderRadius: "8px",
-            }}
-          ></div> */}
         </div>
       </div>
     ),
@@ -85,6 +73,11 @@ const DefaultOgImage = async () => {
       width: 1200,
       height: 630,
       fonts: [
+        {
+          name: "Archivo",
+          data: archivoFontData,
+          style: "normal",
+        },
         {
           name: "Bentoga",
           data: bentogaFontData,

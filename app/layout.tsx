@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 
 const inter = Archivo({ subsets: ["latin"] });
 export const metadata: Metadata = {
-  // metadataBase: new URL("https://www.winestclub.com/"),
   title: "Winest Club - Web3 Wine Enthusiasts",
   description:
     "We are a WINE CLUB ! The Winest Club will have 10,000 members. To represent these members, we have created a collection of 10,000 NFTs. These NFTs will be like a membership card. Anyone who has it in their possession will be able to unlock and access all the privileges it entitles them to.",
@@ -20,7 +19,7 @@ export const metadata: Metadata = {
   formatDetection: { telephone: false },
   openGraph: {
     type: "website",
-    url: "https://www.winestclub.com/",
+    url: "/",
     title: "Winest Club",
     description:
       "Winest Club is a Wine Club on Web3. We created the first Shared & Tokenized Cellar for fine Wine. INVEST - STOCK - BUY & Enjoy Dividends !",

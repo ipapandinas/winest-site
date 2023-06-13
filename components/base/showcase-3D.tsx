@@ -110,8 +110,8 @@ const Showcase3D = ({ images, selectedImageId, setSelectedImageId }: Props) => {
 };
 
 const SWrapper = styled.div`
-  width: 24rem;
-  height: 100%;
+  width: auto;
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -141,9 +141,8 @@ const SWrapper = styled.div`
     z-index: 1;
   }
 
-  height: 300px;
-
   @media screen and (min-width: 768px) {
+    width: 24rem;
     height: 400px;
   }
 `;
