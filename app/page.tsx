@@ -108,20 +108,19 @@ export default function Home() {
         <div className="mx-auto flex flex-col justify-between gap-16 lg:gap-32 lg:container lg:flex-row">
           <div className="text-center lg:text-left leading-5">
             <h1 className="text-5xl font-extrabold lg:text-6xl lg:max-w-lg leading-tight">
-              Shaping the future of Wine industry with the power of{" "}
-              <span className={`${bentoga.className} mt-2`}>Web3</span>
+              Shaping the future of{" "}
+              <span className={`${bentoga.className} mt-2`}>Wine</span> industry
+              with the power of Web3
             </h1>
             <p className="text-2xl text-slate-500 mt-6 lg:mt-8 lg:text-3xl lg:max-w-sm">
               Empowering everyone to invest, stock{" "}
               <span className="text-secondary">&</span> buy fine wine
             </p>
-            <Button
-              className="mt-6 lg:mt-8"
-              variant="secondary"
-              // onClick={executeScroll}
-            >
-              Learn More
-            </Button>
+            <AppLink href="http://bit.ly/3HogBKh">
+              <Button className="mt-6 lg:mt-8" variant="secondary">
+                Learn More
+              </Button>
+            </AppLink>
             <div className="flex gap-3 mt-4 justify-center lg:justify-start">
               <AppLink href="https://twitter.com/WnstClub">
                 <AppImage
