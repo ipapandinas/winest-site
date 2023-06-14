@@ -93,6 +93,7 @@ const Showcase3D = ({ images, selectedImageId, setSelectedImageId }: Props) => {
             className="block md:hidden rounded-3xl"
             alt="Hero card"
             src={src}
+            priority
             height={250}
             width={250}
           />

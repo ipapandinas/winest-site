@@ -36,7 +36,7 @@ export function Timeline({ steps }: IProps) {
   }, []);
 
   useEffect(() => {
-    return scrollYProgress.onChange((v) => {
+    return scrollYProgress.on("change", (v) => {
       x.set(v);
     });
   }, [scrollYProgress, x]);

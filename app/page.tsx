@@ -23,9 +23,9 @@ const bentoga = localFont({
 });
 
 const SHOWCASE_3D_IMAGES = [
-  "/assets/hero-card-0.png",
-  "/assets/hero-card-1.png",
-  "/assets/hero-card-2.png",
+  "/assets/hero-card-0.jpg",
+  "/assets/hero-card-1.jpg",
+  "/assets/hero-card-2.jpg",
 ];
 
 const TIMELINE_STEPS = [
@@ -113,12 +113,11 @@ export default function Home() {
               with the power of Web3
             </h1>
             <p className="text-2xl text-slate-500 mt-6 lg:mt-8 lg:text-3xl lg:max-w-sm">
-              Empowering everyone to invest, stock{" "}
-              <span className="text-secondary">&</span> buy fine wine
+              Empowering everyone to invest, stock & buy fine wine
             </p>
             <AppLink href="http://bit.ly/3HogBKh">
               <Button className="mt-6 lg:mt-8" variant="secondary">
-                Learn More
+                Whitepaper
               </Button>
             </AppLink>
             <div className="flex gap-3 mt-4 justify-center lg:justify-start">
@@ -228,6 +227,8 @@ export default function Home() {
                 Membership!"
                 imageAlt="Wine Club logo"
                 imageSrc="/assets/buble-club.png"
+                imageHeight={500}
+                imageWidth={500}
                 title="Wine Club"
               />
             </div>
@@ -243,6 +244,8 @@ export default function Home() {
                   dividends, buying WNST Tokens!"
                 imageAlt="Wine Cellar logo"
                 imageSrc="/assets/buble-cellar.png"
+                imageHeight={422}
+                imageWidth={432}
                 title="Shared Cellar"
               />
             </div>
@@ -276,7 +279,7 @@ export default function Home() {
             <div className="w-full">
               <KeyCard
                 category="MEMBERS"
-                body="Memberships, represented as non-fungible tokens (NFTs), are sold as one-time purchases and offer varying access levels to the wines available in the shared cellar "
+                body="Memberships, represented as non-fungible tokens (NFT), are sold as one-time purchases and offer varying access levels to the wines available in the shared cellar "
                 imageAlt="Winest industry"
                 imageSrc="/assets/members.png"
                 isRtl
@@ -351,9 +354,13 @@ export default function Home() {
         transition={{ duration: 1 }}
       >
         <div className="mx-auto md:container">
-          <h2 className="text-5xl font-bold block sm:hidden">Winest App</h2>
-          <h2 className="text-5xl font-bold hidden sm:block">
-            Winest Application
+          <h2 className="text-5xl block sm:hidden">
+            <strong className="font-bold">Winest</strong>{" "}
+            <span className={bentoga.className}>App</span>
+          </h2>
+          <h2 className="text-5xl hidden sm:block">
+            <strong className="font-bold">Winest</strong>{" "}
+            <span className={bentoga.className}>Application</span>
           </h2>
           <div className="flex flex-col mt-16 gap-4 bg-black p-8 rounded-3xl lg:items-center lg:flex-row lg:justify-around">
             <div>
@@ -363,13 +370,19 @@ export default function Home() {
                 directly from the shared cellar in few clicks
               </p>
             </div>
-            <AppImage
-              className="m-auto sm:m-0"
-              alt="Winest Application snippet"
-              src="/assets/app.png"
-              height={400}
-              width={450}
-            />
+            <div
+              style={{
+                background: "radial-gradient(farthest-side,#60ffa560,#000)",
+              }}
+            >
+              <AppImage
+                className="m-auto sm:m-0"
+                alt="Winest Application snippet"
+                src="/assets/winest-app.png"
+                height={488}
+                width={450}
+              />
+            </div>
           </div>
         </div>
       </motion.section>
@@ -390,7 +403,7 @@ export default function Home() {
             Community
           </h2>
           <h3 className="text-3xl text-center mt-4">
-            <strong className="font-bold">Join us now!</strong>
+            <strong className="font-bold">Join the conversation now</strong>
           </h3>
           <div className="flex flex-col justify-center items-center gap-8 mt-16 md:flex-row">
             <SocialCard

@@ -32,7 +32,7 @@ export function TeamAvatar({
       />
       <div className="text-lg text-center font-bold mt-4">{name}</div>
       <div className="text-lg text-primary text-center font-bold">{role}</div>
-      <div className="flex gap-4 mt-2">
+      {/* <div className="flex gap-4 mt-2">
         {linkedinHref && (
           <AppLink href={linkedinHref}>
             <Linkedin />
@@ -43,7 +43,7 @@ export function TeamAvatar({
             <Twitter />
           </AppLink>
         )}
-      </div>
+      </div> */}
       <p className="text-sm text-center mt-4 max-w-lg">{bio}</p>
     </div>
   );

@@ -28,7 +28,13 @@ export function KeyCard({
         <h3 className="text-4xl font-bold mt-2">{title}</h3>
         <p className="text-xl mt-4 max-w-sm">{body}</p>
       </div>
-      <AppImage alt={imageAlt} src={imageSrc} height={300} width={300} />
+      <AppImage
+        className="w-auto"
+        alt={imageAlt}
+        src={imageSrc}
+        height={300}
+        width={300}
+      />
     </div>
   );
 }

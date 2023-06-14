@@ -2,14 +2,16 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { TeamAvatar } from "./team-avatar";
 import { useState } from "react";
+import { useMediaQuery } from "react-responsive";
 
 export function Team() {
+  const isDesktopOrLaptop = useMediaQuery({ minWidth: 768 });
   const [refPaul, isInViewPaul] = useInView();
   const [hasBeenInViewPaul, setHasBeenInViewPaul] = useState(false);
   if (isInViewPaul && !hasBeenInViewPaul) setHasBeenInViewPaul(true);
 
   const [refAll, isInViewAll] = useInView();
-  const [hasBeenInViewAll, setHasBeenInViewAll] = useState(false);
+  const [hasBeenInViewAll, setHasBeenInViewAll] = useState(!isDesktopOrLaptop);
   if (isInViewAll && !hasBeenInViewAll) setHasBeenInViewAll(true);
 
   return (
@@ -22,7 +24,7 @@ export function Team() {
           opacity: hasBeenInViewPaul ? 1 : 0,
           y: hasBeenInViewPaul ? 0 : 50,
         }}
-        transition={{ delay: 0.2, duration: 1 }}
+        transition={{ delay: isDesktopOrLaptop ? 0.2 : 0, duration: 1 }}
       >
         <TeamAvatar
           bio="Engineer with an MBA from INSEAD , 15 years international leadership roles serving last as a GM for Danaher SEA-ANZ. Cofounder of Tanyno Trading (wine distribution in Brazil) & Multimicrocloud (software solution)"

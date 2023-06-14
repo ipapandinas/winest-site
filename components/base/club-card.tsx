@@ -8,10 +8,19 @@ interface IProps {
   body: string;
   imageAlt: string;
   imageSrc: string;
+  imageHeight: number;
+  imageWidth: number;
   title: string;
 }
 
-export function ClubCard({ body, imageAlt, imageSrc, title }: IProps) {
+export function ClubCard({
+  body,
+  imageAlt,
+  imageSrc,
+  imageHeight,
+  imageWidth,
+  title,
+}: IProps) {
   const [refImage, isInViewImage] = useInView();
   const [hasBeenInViewImage, setHasBeenInViewImage] = useState(false);
   if (isInViewImage && !hasBeenInViewImage) setHasBeenInViewImage(true);
@@ -40,8 +49,8 @@ export function ClubCard({ body, imageAlt, imageSrc, title }: IProps) {
           className="mx-auto"
           alt={imageAlt}
           src={imageSrc}
-          height={500}
-          width={500}
+          height={imageHeight}
+          width={imageWidth}
         />
       </motion.div>
     </div>
