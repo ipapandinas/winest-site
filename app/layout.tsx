@@ -65,7 +65,7 @@ export default function RootLayout({
                 alt="Winest Club Homepage"
                 src="/assets/logo.png"
                 priority
-                height={53.5}
+                height={54}
                 width={48}
               />
               <AppImage

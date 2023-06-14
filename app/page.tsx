@@ -100,7 +100,7 @@ export default function Home() {
     <>
       {/* HERO */}
       <section
-        className="w-full py-32 px-8"
+        className="w-full py-16 lg:py-32 px-8"
         // style={{
         //   backgroundImage: "radial-gradient(at 40% 30%,#792c3b30 0%,#fff 30%)",
         // }}
@@ -157,7 +157,7 @@ export default function Home() {
       </section>
 
       {/* VISION */}
-      <section className="w-full bg-slate-100 py-32 px-8">
+      <section className="w-full bg-slate-100 py-16 lg:py-32 px-8">
         <motion.div
           className="mx-auto md:container"
           ref={refVision}
@@ -200,7 +200,7 @@ export default function Home() {
 
       {/* CLUB AND CELLAR */}
       <motion.section
-        className="w-full py-32 px-8"
+        className="w-full py-16 lg:py-32 px-8"
         ref={refClubCellar}
         initial={{ opacity: 0, y: 50 }}
         animate={{
@@ -255,7 +255,7 @@ export default function Home() {
 
       {/* HOW IT WORKS */}
       <motion.section
-        className="w-full py-32 px-8"
+        className="w-full py-16 lg:py-32 px-8"
         ref={refHowItWork}
         initial={{ opacity: 0, y: 50 }}
         animate={{
@@ -301,7 +301,7 @@ export default function Home() {
 
       {/* ROADMAP */}
       <motion.section
-        className="w-full bg-slate-100 py-32 px-8"
+        className="w-full bg-slate-100 py-16 lg:py-32 px-8"
         ref={refRoadmap}
         initial={{ opacity: 0, y: 50 }}
         animate={{
@@ -327,7 +327,7 @@ export default function Home() {
 
       {/* TEAM */}
       <motion.section
-        className="w-full py-32 px-8"
+        className="w-full py-16 lg:py-32 px-8"
         ref={refTeam}
         initial={{ opacity: 0, y: 50 }}
         animate={{
@@ -344,7 +344,7 @@ export default function Home() {
 
       {/* WINEST APPLICATION */}
       <motion.section
-        className="w-full py-32 px-8"
+        className="w-full py-16 lg:py-32 px-8"
         ref={refApp}
         initial={{ opacity: 0, y: 50 }}
         animate={{
@@ -389,7 +389,7 @@ export default function Home() {
 
       {/* COMMUNITY */}
       <motion.section
-        className="w-full py-32 px-8"
+        className="w-full py-16 lg:py-32 px-8"
         ref={refCommunity}
         initial={{ opacity: 0, y: 50 }}
         animate={{
