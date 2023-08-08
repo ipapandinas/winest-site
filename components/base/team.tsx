@@ -35,7 +35,7 @@ export function Team() {
           linkedinHref="https://www.linkedin.com/in/paul-peyrucq-7215044b/"
         />
       </motion.div>
-      <div className="grid grid-cols-1 md:grid-cols-3 mt-16 gap-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 mt-16 gap-16">
         <motion.div
           ref={refAll}
           initial={{ opacity: 0, y: 50 }}
@@ -73,7 +73,7 @@ export function Team() {
             twitterHref="https://twitter.com/Jadpeyrucq"
           />
         </motion.div>
-        <motion.div
+        {/* <motion.div
           ref={refAll}
           initial={{ opacity: 0, y: 50 }}
           animate={{
@@ -91,7 +91,7 @@ export function Team() {
             linkedinHref="https://www.linkedin.com/in/igor-papandinas/"
             twitterHref="https://twitter.com/dontelmo_"
           />
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   );
